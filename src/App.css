@@ -4,8 +4,8 @@ body {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 200px;
+  height: 80px;
   float: left;
 }
 
@@ -14,7 +14,7 @@ nav {
   margin: 0;
   padding: 15px;
   overflow: hidden;
-  background-color: #1ba696;
+  background-color: #c2a500;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,4 +130,59 @@ nav {
   padding-top: 60px;
   justify-content: center;
   align-items: center;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+/* .content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+} */
+
+div.scroll-container {
+  background-color: #3333330c;
+  border-radius: 20px;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  object-fit: contain;
+  margin: 20px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.txts {
+  padding: 60px;
+  text-align: left;
+  font-size: large;
+  font-style: normal;
+  color: #535353;
+}
+
+h1 {
+  color: #1ba696;
+  font-size: 260%;
 }
