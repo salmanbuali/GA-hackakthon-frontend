@@ -1,54 +1,66 @@
 import React, { useState } from 'react'
 import '../App.css'
-
+import axios from 'axios'
 const AddEvent = () => {
-  const [title, setTitle] = useState('')
-  const [image, setImage] = useState('')
-  const [ageRequirements, setAgeRequirements] = useState('')
-  const [date, setDate] = useState('')
+  const initialState = {
+    name: '',
+    location: '',
+    date_time: '',
+    age_group: '',
+    pic: ''
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!title || !image || !ageRequirements || !date) {
-      alert('Please fill in all fields')
-      return
-    }
-    const newEvent = { title, image, ageRequirements, date }
-    setTitle('')
-    setImage('')
-    setAgeRequirements('')
-    setDate('')
+  const [formState, setFormState] = useState(initialState)
 
-    console.log(newEvent)
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    let response = await axios.post('http://localhost:3001/events/', formState)
+    console.log(response)
+    setFormState(initialState)
+  }
+
+  const handleChange = (event) => {
+    setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   return (
     <div className="add-event">
       <h2>Add Event</h2>
       <form onSubmit={handleSubmit}>
-        <label>Title:</label>
+        <label>Name:</label>
         <input
           type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={formState.name}
+          onChange={handleChange}
+          id='name'
         />
         <label>Image URL:</label>
         <input
           type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
+          value={formState.pic}
+          onChange={handleChange}
+          id='pic'
         />
-        <label>Age Requirements:</label>
+        <label>Age Group:</label>
         <input
           type="text"
-          value={ageRequirements}
-          onChange={(e) => setAgeRequirements(e.target.value)}
+          value={formState.age_group}
+          onChange={handleChange}
+          id='age_group'
         />
-        <label>Date:</label>
+        <label>Date and Time:</label>
         <input
           type="text"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
+          value={formState.date_time}
+          onChange={handleChange}
+          id='date_time'
+        />
+        <label>Location:</label>
+        <input
+          type="text"
+          value={formState.location}
+          onChange={handleChange}
+          id='location'
         />
         <button type="submit">Add Event</button>
       </form>
