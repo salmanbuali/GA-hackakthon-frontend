@@ -5,8 +5,7 @@ import Rides from "./components/Rides"
 import Home from "./components/Home"
 import AddRides from "./components/AddRides"
 import AddEvent from "./components/AddEvent"
-// import AddEvent from './components/AddEvent'
-// import Event from './components/Event'
+import Event from './components/Event'
 
 
 const App = () => {
