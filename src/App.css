@@ -53,44 +53,76 @@ body.event-page {
 }
 
 .add-event {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  max-width: 50%;
+  background: #c2a500;
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin: 20%;
 }
 
 .add-event h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 50px;
+  color: #ffffff;
 }
 
 .add-event form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
+  margin-top: 10%;
 }
 
-.add-event label {
+.add-event form label {
+  display: block;
   margin-bottom: 5px;
 }
 
-.add-event input {
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.add-event button {
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: white;
+.add-event form input {
+  width: 100%;
+  background: white;
   border: none;
-  border-radius: 3px;
-  cursor: pointer;
+  padding: 15px 20px 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  box-shadow: #cff0ff 0px 10px 10px -5px;
 }
 
-.add-event button:hover {
-  background-color: #0056b3;
+.add-event form input::placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.add-event form input:focus {
+  outline: none;
+  border: 2px solid #12b1d1;
+}
+
+.add-event form button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-event form button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.add-event form button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
 }
