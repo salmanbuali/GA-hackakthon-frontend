@@ -5,7 +5,7 @@ const NavBar = () => {
     <header>
       <nav>
         <div>
-          <img className="logo" src="Green Fun Carnival Theme Park Logo.png" />
+          <img className="logo" src="SALLY LAND.png" />
         </div>
         <div className="link">
           <Link className="navBtn" to={"/"}>
