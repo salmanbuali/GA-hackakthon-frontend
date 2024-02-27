@@ -4,12 +4,15 @@ import NavBar from "./components/NavBar"
 import Rides from "./components/Rides"
 import Home from "./components/Home"
 import AddEvent from './components/AddEvent'
-import Event from './components/Event'
+// import Event from './components/Event'
 
 
 const App = () => {
   return (
     <div>
+
+      {/* <Event /> */}
+      //<AddEvent />
 
       <NavBar />
       <div>
@@ -25,6 +28,7 @@ const App = () => {
 
 //       <Event />
 //       <AddEvent />
+
 
     </div>
   )
