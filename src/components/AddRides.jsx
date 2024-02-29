@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import '../App.css'
 import axios from 'axios'
+import { useNavigate} from 'react-router-dom'
 
 const AddRides = () => {
+  let navigate = useNavigate()
+
   const initialState = {
     name: '',
     pic: '',
@@ -20,9 +23,10 @@ const AddRides = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let response = await axios.post('http://localhost:3001/rides/', formState)
+    let response = await axios.post('https://ga-hackakthon-backend.fly.dev/rides/', formState)
     console.log(response)
     setFormState(initialState)
+    navigate('/Rides')
   }
 
   return (

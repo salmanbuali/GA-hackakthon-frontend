@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import '../App.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 const AddEvent = () => {
+  let navigate = useNavigate()
   const initialState = {
     name: '',
     location: '',
@@ -14,9 +17,10 @@ const AddEvent = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let response = await axios.post('http://localhost:3001/events/', formState)
+    let response = await axios.post('https://ga-hackakthon-backend.fly.dev/events/', formState)
     console.log(response)
     setFormState(initialState)
+    navigate('/Events')
   }
 
   const handleChange = (event) => {
