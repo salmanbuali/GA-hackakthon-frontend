@@ -5,12 +5,11 @@ const NavBar = () => {
     <header>
       <nav>
         <div>
+        <Link className="navBtn" to={"/"}>
           <img className="logo" src="SALLY LAND.png" />
+        </Link> 
         </div>
         <div className="link">
-          <Link className="navBtn" to={"/"}>
-            Home
-          </Link>
           <Link  to={"/Rides"}>
             Rides
           </Link>
